@@ -21,24 +21,21 @@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <a class="navbar-brand" href="../public/index.php">Jean Forteroche<br><small>Auteur et écrivain</small></a>
+                        <a class="navbar-brand" href="../public/index.php">BEST BURGERS<br><small> Grill sur charbon </small></a>
                         <div class="collapse navbar-collapse" id="navbarToggler">  
                             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link" href="../public/index.php">Accueil</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../public/index.php?route=about">Qui suis-je ?</a>
+                                <a class="nav-link" href="../public/index.php?route=about">Nos Burgers</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../public/index.php?route=blog">Blog</a>
+                                <a class="nav-link" href="../public/index.php?route=blog">Nos Boisson</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="../public/index.php?route=contact">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                            <a href="../public/index.php?route=login" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Connexion</a>
-                            </li>		
+                            </li>	
                             </ul>
                         </div>
                     </nav>
@@ -46,8 +43,8 @@
             <!-- Photos pleine page -->
             <div class="wrapper">
                 <div class="content">
-                    <h1>"Billet simple pour l'Alaska"</h1>
-                    <p>Un roman de Jean Forteroche !</p>
+                    <h1>"BEST BURGERS GRILL "</h1>
+                    <p>Burgers grill sur charbon !</p>
                 </div>
             </div>
         </header>
