@@ -25,8 +25,10 @@
 					<form class="" method="POST" action="">
 						<label for="title">Titre</label><br>
 						<input class="form-control mx-sm-8" type="text" id="title" name="title"><br>
-						<label for="content">Contenu</label><br>
-						<textarea id="basic-conf" class="form-control mx-sm-8" id="content" name="content"></textarea><br>
+						<label for="images">images</label><br>
+						<textarea id="basic-conf" class="form-control mx-sm-8" id="images" name="images"></textarea><br>
+						<label for="content">content</label><br>
+						<input class="form-control mx-sm-8" type="text" id="content" name="content"><br>
 						<label for="author">Auteur</label><br>
 						<input class="form-control mx-sm-8" type="text" id="author" name="author"><br>
 						<input class="btn btn-success" type="submit" value="Envoyer" id="submit" name="submit">

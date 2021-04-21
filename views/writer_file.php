@@ -22,31 +22,28 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="../public/index.php">Jean Forteroche<br><small>Auteur et écrivain</small></a>
+                <a class="navbar-brand" href="../public/index.php"><img src="../public/images/logo.png"></a>
                 <div class="collapse navbar-collapse" id="navbarToggler">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="../public/index.php">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../public/index.php?route=about">Qui suis-je ?</a>
+                            <a class="nav-link" href="../public/index.php?route=blog">Nos Burgers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../public/index.php?route=blog">Blog</a>
+                            <a class="nav-link" href="../public/index.php?route=about">Nos Boisson</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../public/index.php?route=contact">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../public/index.php?route=login" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Connexion</a>
-                        </li>
+                        </li>	
                     </ul>
                 </div>
             </nav>
         </div> <!-- Photo plein écran -->
         <div class="wrapper">
             <div class="content">
-                <h1>"QUI SUIS-JE ?"</h1>
+                <h1>"NOS BURGERS ?"</h1>
                 <p>Entrez dans mon univers !</p>
             </div>
         </div>

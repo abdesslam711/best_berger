@@ -24,7 +24,7 @@
         
         public function blog()
         {
-            $sql = 'SELECT id, title, content, author, createdAt FROM article ORDER BY id DESC ' ;
+            $sql = 'SELECT id, title, images, content, author, createdAt FROM article ORDER BY id DESC ' ;
             $query = $this->createQuery($sql);
             $articles = $query->fetchAll();
             

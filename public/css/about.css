@@ -21,7 +21,7 @@ img{
 ----------------------------------------------------------------*/
 header {
 	position: relative;
-	background: url("../images/about.jpg") no-repeat center center;
+	background: url("../images/mojito.png") no-repeat center center;
 	background-size: cover;
 	color: #fff;
 	text-shadow: 1px 1px 10px #000; }
@@ -42,7 +42,9 @@ header {
 
 /*----------nav---------*/
 .navbar-brand {
-  	font-weight: bold; }
+  	font-weight: bold;
+	  width: 10%;
+	  height: 10%; }
 .navbar-brand small {
     font-weight: normal; }
 
@@ -92,6 +94,10 @@ footer .row {
   	margin-right: 0 !important; }
 
 @media all and (max-width: 576px) {
+	.navbar-brand{
+		width: 20%;
+		height: 20%;
+	}
 	footer {
 		text-align: center !important; }
 	footer ul {

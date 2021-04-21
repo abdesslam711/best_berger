@@ -23,56 +23,46 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="../public/index.php">Jean Forteroche<br><small>Auteur et écrivain</small></a>
+                <a class="navbar-brand" href="../public/index.php"><img src="../public/images/logo.png"></a>
                 <div class="collapse navbar-collapse" id="navbarToggler">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="../public/index.php">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../public/index.php?route=about">Qui suis-je ?</a>
+                            <a class="nav-link" href="../public/index.php?route=blog">Nos Burgers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../public/index.php?route=blog">Blog</a>
+                            <a class="nav-link" href="../public/index.php?route=about">Nos Boisson</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../public/index.php?route=contact">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../public/index.php?route=login" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Connexion</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </div> <!-- Photo pleine page -->
-        <div class="wrapper">
-            <div class="content">
-                <div class="text-content">
-                    <h1>Le Blog</h1>
-                    <p>"Toujours aussi proche de ses lecteurs et à leur écoute, Jean Forteroche a décidé cette année de publier son livre directement en ligne, en offrant à ses fans un nouveau chapitre par semaine. Ne manquez donc pas le fil des aventures de ses personnages, et plongez dès à présent dans le monde du mystère et des découvertes !"</p>
-                </div>
-            </div>
-        </div>
+        
     </header>
     <div class="container" role="main">
-        <div class="row mt-4">
+        <div class="row mt-2 content_section">
             <?php
             foreach ($articles as $article) {
             ?>
-            <div id="list"></div>
-            <!-- Récupération et construction des articles sur la page -->
-            <div class="container mt-4 p-4">
-                <article>
-                    <h2><?= htmlspecialchars($article['title']); ?></a></h2>
-                    <p><?= $article['content']; ?></p>
-                    <p><?= htmlspecialchars($article['author']); ?></p>
-                    <a href="../public/index.php?route=single&articleId=<?= htmlspecialchars($article['id']); ?>" class="btn btn-primary"><i class="fas fa-book-open"></i> Lire</a>
-                </article>
-            </div>
-        </div>
-    <?php
+                <!-- Récupération et construction des articles sur la page -->
+                <div class="container mt-4 p-4 content_articles">
+                    <article>
+                        <h3><?= htmlspecialchars($article['title']); ?></a></h3>
+                        <a><?= $article['images']; ?></a>
+                        <a><?= $article['content']; ?></a>
+                        <a><?= htmlspecialchars($article['author']); ?></a>
+                        <a href="../public/index.php?route=single&articleId=<?= htmlspecialchars($article['id']); ?>" class="btn btn-primary"><i class="fas fa-book-open"></i> Voir</a>
+                    </article>
+                </div>
+            <?php
             }
-    ?>
+            ?>
+        </div>
     </div>
     <hr>
     <!-- inclusion du footer -->
@@ -87,6 +77,7 @@
                     <li><a href="../public/index.php?route=blog">Blog</a></li>
                     <li><a href="../public/index.php?route=contact">Contact</a></li>
                     <li><a href="../public/index.php">Mentions légales</a></li>
+                    <a href="../public/index.php?route=login" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Connexion</a>
                 </ul>
             </div>
         </div>

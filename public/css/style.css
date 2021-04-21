@@ -40,6 +40,10 @@ img{
 /*----------------------------------------------------------------
 ------------------------------header------------------------------
 ----------------------------------------------------------------*/
+.navbar-brand{
+	width: 10%;
+	height: 10%;
+}
 header {
 	position: relative;
 	background: url("../images/wooper.jpg");
@@ -77,7 +81,9 @@ header {
 }
   /*----------nav---------*/
 .navbar-brand {
-	font-weight: bold; }
+	font-weight: bold;
+
+}
 .navbar-brand small {
 	  font-weight: normal; }
   
@@ -174,6 +180,10 @@ footer .row {
   --------------------------Media queries---------------------------
   ----------------------------------------------------------------*/
   @media all and (max-width: 576px) {
+	.navbar-brand{
+		width: 20%;
+		height: 20%;
+	}
 	footer {
 	  	text-align: center !important; }
 	footer ul {
