@@ -51,16 +51,17 @@
 
         public function add_article()
         {
-            if (isset($_POST["title"], $_POST["content"], $_POST["author"]))
+            if (isset($_POST["title"], $_POST["images"], $_POST["content"], $_POST["author"]))
                 {
                 $title = htmlspecialchars($_POST['title']);
+                $images = $_POST['images'];
                 $content = $_POST['content'];
                 $author = htmlspecialchars($_POST['author']);
                 
-                if (!empty($_POST["title"]) && !empty($_POST["content"]) && !empty($_POST["author"])) {
-                    $sql = 'INSERT INTO article (title, content, author, createdAt) VALUES (?, ?, ?, NOW())';
+                if (!empty($_POST["title"]) && !empty($_POST["images"]) && !empty($_POST["content"]) && !empty($_POST["author"])) {
+                    $sql = 'INSERT INTO article (title, images, content, author, createdAt) VALUES (?, ?, ?, ?, NOW())';
                     $_SESSION['add_article_erreur'] = "<span>Votre article à bien été ajouté.</span>";
-                    return $this->createQuery($sql,[$title, $content, $author]);
+                    return $this->createQuery($sql,[$title,$images, $content, $author]);
                     
                 }else{
                     $_SESSION['add_article_erreur'] = "<span>tous les chemps doivent étre remplies.</span>";
@@ -72,11 +73,12 @@
         
         public function edit_Article($POST, $articleId)
         {
-           if(isset($_POST["title"], $_POST["content"], $_POST["author"]) && !empty($_POST["title"]) && !empty($_POST["content"]) && !empty($_POST["author"]))
+           if(isset($_POST["title"], $_POST["images"], $_POST["content"], $_POST["author"]) && !empty($_POST["title"]) && !empty($_POST["images"]) && !empty($_POST["content"]) && !empty($_POST["author"]))
            {
-                $sql = 'UPDATE article SET title=:title, content=:content, author=:author WHERE id=:articleId';
+                $sql = 'UPDATE article SET title=:title, images:images, content=:content, author=:author WHERE id=:articleId';
                 $this->createQuery($sql, [
                     'title' => $POST['title'],
+                    'images' => $POST['images'],
                     'content' => $POST['content'],
                     'author' => $POST['author'],
                     'articleId' => $articleId

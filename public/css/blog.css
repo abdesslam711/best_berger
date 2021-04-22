@@ -15,21 +15,21 @@ header, body, html {
 ul li {
     list-style-type: none;
     display: inline-flex; }
-img{
-    width: 100%;
-    height: auto;
+article a img{
+    width: auto;
+    height: 100%;
 }
 /*----------------------------------------------------------------
 ------------------------------header------------------------------
 ----------------------------------------------------------------*/
-article p{
-    
-    
-}
-
 /*----------nav---------*/
 .navbar{
     background-color: lightseagreen;
+}
+.navbar-brand img{
+
+    width: 100%;
+    height: auto;
 }
 .navbar-brand {
     font-weight: bold;
@@ -54,8 +54,6 @@ article p{
 .nav-item {
     padding: 0 1rem !important; }
 
-.navbar-nav {
-    background: rgba(32, 60, 86, 0.9); }
 
 nav.scrolling {  
     background-color:#20B2AA;
@@ -64,23 +62,40 @@ nav.scrolling {
 /*----------------------------------------------------------------
 ------------------------------section liste articles------------------------------
 ----------------------------------------------------------------*/
+.section{
+    width: 100%;
+}
 .container{
 margin-top: 115px;
+padding: 0 !important;
 }
 .content_section{
     display: flex;
-    height: 100%;
+    justify-content: space-around;
+    padding-top: 120px;
+    width: 90%;
+    margin: auto;
 }
 .content_articles{
-    width: 25%;
+    width: 22.50%;
     height: auto;
     margin: 0;
+    overflow: hidden;
 }
 section {
     padding: 4rem 1rem; }
 
 section p {
     margin-bottom: 4rem; }
+article a p{
+    width: 240px;
+    height: 180px;
+        
+    }
+    article{
+        width: 100%;
+       
+    }
 
 .btn.btn-primary {
     background: #0066cc; }
@@ -108,30 +123,63 @@ footer div.row:last-child {
 footer .row {
     margin-right: 0 !important; }
 
-@media all and (max-width: 576px) {
-    .navbar-brand{
-		width: 20%;
-		height: 20%;
-	}
-    footer {
-        text-align: center !important; }
-        footer ul {
-        padding-left: 1rem !important; }
+    @media all and (max-width: 1250px) {
+        .content_articles{
+            width: 33.33%;
+            height: auto;
+            margin: 0;
+        }
+        article a p{
+            width: 100%;
+            height: auto;
+                
+            }
+        article a img {
+            width: 100%;
+            height: auto;
+        }
+        article{
+            height: auto;
+        }
+        .navbar, section {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important; }
+    
+        .navbar-nav {
+            background: none;
+            margin-right: 0 !important; }
+    
+        .nav-link {
+            font-size: 1.2rem !important; }
+    
+        .navbar-brand {
+            font-size: 1.8rem !important;
+            line-height: 2rem !important; }
+            .navbar-brand small {
+            font-size: 1rem;
+            padding-left: 2.8rem; }
+    
         footer p small {
-        padding-left: 0 !important;
-        margin-left: 0 !important; }
-
-    .media {
-        flex-direction: column; }
-        .media img {
-        margin-right: 0 !important;
-        width: 100% !important; } 
+            padding-left: 2rem !important; } 
+        }
+@media all and (max-width: 992px) {
+    .content_articles{
+        width: 49.99%;
+        height: auto;
+        margin: 0;
     }
-    .content p {
-        font-size: 1rem;
-        padding: 2rem;
-        font-weight: 500; }
-@media all and (min-width: 993px) {
+    article a p{
+        width: 100%;
+        height: auto;
+            
+        }
+    article a img {
+        width: 100%;
+        height: auto;
+    }
+    article{
+        height: auto;
+    }
     .navbar, section {
         padding-left: 1rem !important;
         padding-right: 1rem !important; }
@@ -153,3 +201,31 @@ footer .row {
     footer p small {
         padding-left: 2rem !important; } 
     }
+    @media all and (max-width: 576px) {
+        .navbar-brand{
+            width: 20%;
+            height: 20%;
+        }
+        .content_articles{
+            width: 100%;
+            height: auto;
+            margin: 0;
+        }
+        footer {
+            text-align: center !important; }
+            footer ul {
+            padding-left: 1rem !important; }
+            footer p small {
+            padding-left: 0 !important;
+            margin-left: 0 !important; }
+    
+        .media {
+            flex-direction: column; }
+            .media img {
+            margin-right: 0 !important;
+            width: 100% !important; } 
+        }
+        .content p {
+            font-size: 1rem;
+            padding: 2rem;
+            font-weight: 500; }

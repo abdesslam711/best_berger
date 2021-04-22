@@ -27,6 +27,9 @@
                         <label for="title">Titre</label><br>
                         <input class="form-control mx-sm-6" type="text" id="title" name="title" value="<?php echo $article[0]['title'] ?>"><br>
 
+                        <label for="images">images</label><br>
+                        <input class="form-control mx-sm-6" type="text" id="images" name="images" value="<?php echo $article[0]['images'] ?>"><br>
+
                         <label for="content">Contenu</label><br>
                         <textarea id="basic-conf" class="form-control mx-sm-8" id="content" name="content"> <?php echo $article[0]['content'] ?> </textarea><br>
 

@@ -15,37 +15,34 @@
 </head>
 
 <body>
-    <header role="banner">
-        <!-- inclusion du menu -->
-        <div class="row justify-content-center" role="navigation">
-            <nav class="navbar navbar-expand-lg navbar-dark col-sm fixed-top">
+<!-- inclusion du menu -->
+    
+        <nav class="navbar navbar-expand-lg navbar-dark col-sm fixed-top">
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="../public/index.php"><img src="../public/images/logo.png"></a>
-                <div class="collapse navbar-collapse" id="navbarToggler">
-                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../public/index.php">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../public/index.php?route=blog">Nos Burgers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../public/index.php?route=about">Nos Boisson</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../public/index.php?route=contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div> <!-- Photo pleine page -->
-        
-    </header>
-    <div class="container" role="main">
-        <div class="row mt-2 content_section">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="../public/index.php"><img src="../public/images/logo.png"></a>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../public/index.php">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../public/index.php?route=blog">Nos Burgers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../public/index.php?route=about">Nos Boisson</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../public/index.php?route=contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    
+    <div class="section" role="main">
+        <div class="row content_section">
             <?php
             foreach ($articles as $article) {
             ?>
@@ -54,8 +51,8 @@
                     <article>
                         <h3><?= htmlspecialchars($article['title']); ?></a></h3>
                         <a><?= $article['images']; ?></a>
-                        <a><?= $article['content']; ?></a>
-                        <a><?= htmlspecialchars($article['author']); ?></a>
+                        <h5><?= $article['content']; ?></h5>
+                        <h6><?= htmlspecialchars($article['author']); ?></h6></br>
                         <a href="../public/index.php?route=single&articleId=<?= htmlspecialchars($article['id']); ?>" class="btn btn-primary"><i class="fas fa-book-open"></i> Voir</a>
                     </article>
                 </div>
