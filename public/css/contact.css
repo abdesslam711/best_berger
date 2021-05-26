@@ -41,15 +41,16 @@ img{
 ------------------------------header------------------------------
 ----------------------------------------------------------------*/
 .navbar-brand{
-	width: 10%;
-	height: 10%;
+	width: 35%;
+	height: auto;
+	text-align: center;
 }
 .navbar{
 	
 	background-color: lightseagreen;
 }
 .bloc_page{
-	margin-top: 115px;
+	margin-top: 180px;
 	
 }
 .content {
@@ -71,12 +72,6 @@ img{
 	left: 49%; }
 .drop-down a {
 	color: #fff; }
-@media (min-width: 993px){ 
-	.navbar, form {
-		padding-left: 3rem !important; 
-		padding-right: 3rem !important; 
-	}
-}
   /*----------nav---------*/
 .navbar-brand {
 	font-weight: bold;
@@ -130,12 +125,16 @@ footer div.row:last-child {
 footer .row {
   	margin-right: 0 !important; }
 
-@media all and (max-width: 576px) {
+@media all and (max-width: 480px) {
 	.navbar-brand{
+		text-align: right;
 		width: 50%;
-		height: 50%;
-		text-align: center;
-		margin-right: 0 !important;
+		height: auto;
+	}
+	
+	img{
+		width: 100%;
+		height: auto;
 	}
 	footer {
 		text-align: center !important; }
@@ -147,11 +146,10 @@ footer .row {
 @media all and (min-width: 993px) {
 	.navbar-brand{
 		width: 30%;
-		height: 30%;
+		height: auto;
 		text-align: center;
-		
 	}
-	.navbar, form {
+	form {
 		padding-left: 1rem !important;
 		padding-right: 1rem !important; }
 

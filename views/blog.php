@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="../../blog_ecrivain/public/js/scroll.js"></script>
-    <title>Blog Jean Forteroche</title>
+    <title>Best Burgers Grill</title>
 </head>
 
 <body>
@@ -44,13 +44,13 @@
     <div class="section" role="main">
         <div class="row content_section">
             <?php
-            foreach ($articles as $article) {
+            foreach ($articles as $article) { 
             ?>
                 <!-- Récupération et construction des articles sur la page -->
                 <div class="container mt-4 p-4 content_articles">
                     <article>
                         <h3><?= htmlspecialchars($article['title']); ?></a></h3>
-                        <a><?= $article['images']; ?></a>
+                        <img src="data:image/jpg ;base64,<?= base64_encode($article['images']);?>">
                         <h5><?= $article['content']; ?></h5>
                         <h6><?= htmlspecialchars($article['author']); ?></h6></br>
                         <a href="../public/index.php?route=single&articleId=<?= htmlspecialchars($article['id']); ?>" class="btn btn-primary"><i class="fas fa-book-open"></i> Voir</a>
@@ -70,11 +70,10 @@
             <div class="col-lg-6 d-flex justify-content-center mt-5 pt-4">
                 <ul>
                     <li><a href="../public/index.php">Accueil</a></li>
-                    <li><a href="../public/index.php?route=about">Qui suis-je ?</a></li>
-                    <li><a href="../public/index.php?route=blog">Blog</a></li>
+                    <li><a href="../public/index.php?route=about">Nos Burgers</a></li>
+                    <li><a href="../public/index.php?route=blog">Nos Boisson</a></li>
                     <li><a href="../public/index.php?route=contact">Contact</a></li>
                     <li><a href="../public/index.php">Mentions légales</a></li>
-                    <a href="../public/index.php?route=login" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Connexion</a>
                 </ul>
             </div>
         </div>

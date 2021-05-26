@@ -23,16 +23,16 @@
                 ?>
                 <h1>Modifier mon article</h1>
                 <div class="col-sm-10">
-                    <form class="" method="post" action="index.php?route=send_article&articleId=<?php echo $_GET['articleId']?>">
+                    <form class="" method="post" ENCTYPE="MULTIPART/FORM-DATA" action="index.php?route=send_article&articleId=<?php echo $_GET['articleId']?>">
                         <label for="title">Titre</label><br>
                         <input class="form-control mx-sm-6" type="text" id="title" name="title" value="<?php echo $article[0]['title'] ?>"><br>
 
                         <label for="images">images</label><br>
-                        <input class="form-control mx-sm-6" type="text" id="images" name="images" value="<?php echo $article[0]['images'] ?>"><br>
+                        <input id="basic-conf" type="file" class="form-control mx-sm-8" id="images" name="images">  </input><br>
 
-                        <label for="content">Contenu</label><br>
-                        <textarea id="basic-conf" class="form-control mx-sm-8" id="content" name="content"> <?php echo $article[0]['content'] ?> </textarea><br>
-
+                        <label for="content">content</label><br>
+                        <input class="form-control mx-sm-6" type="text" id="content" name="content" value="<?php echo $article[0]['content'] ?>"><br>
+                        
                         <label for="author">Auteur</label><br>
                         <input class="form-control mx-sm-8" type="text" id="author" name="author" value="<?php echo $article[0]['author'] ?>"><br>
 

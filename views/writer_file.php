@@ -68,8 +68,8 @@ Après 2 ans, il quitte Renault pour créer le site automobile Caradisiac.com7, 
             <div class="col-lg-6 d-flex justify-content-center mt-5 pt-4">
                 <ul>
                     <li><a href="../public/index.php">Accueil</a></li>
-                    <li><a href="../public/index.php?route=about">Qui suis-je ?</a></li>
-                    <li><a href="../public/index.php?route=blog">Blog</a></li>
+                    <li><a href="../public/index.php?route=about">Nos Burgers</a></li>
+                    <li><a href="../public/index.php?route=blog">Nos Boisson</a></li>
                     <li><a href="../public/index.php?route=contact">Contact</a></li>
                     <li><a href="../public/index.php">Mentions légales</a></li>
                 </ul>

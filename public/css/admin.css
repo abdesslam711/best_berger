@@ -36,6 +36,7 @@ span
         background-color: lightgreen;
         text-align: center;
     }
+    
 .top_page{
     background-color: #20B2AA !important; 
 }
@@ -48,7 +49,10 @@ nav {
 		}
 
 .navbar-brand {
-  	font-weight: bold; }
+  	font-weight: bold;
+      width: 25%;
+      text-align: center;
+    }
 .navbar-brand small {
     font-weight: normal; }
 
@@ -133,7 +137,8 @@ footer {
   @media all and (min-width: 993px) {
       .navbar, form {
           padding-left: 1rem !important;
-          padding-right: 1rem !important; }
+         /* padding-right: 1rem !important;*/
+        padding: 0 !important; }
   
       .navbar-nav {
           background: none;
@@ -144,7 +149,7 @@ footer {
   
       .navbar-brand {
           font-size: 1.8rem !important;
-          line-height: 2rem !important; }
+          }
           .navbar-brand small {
           font-size: 1rem;
           padding-left: 2.8rem; }

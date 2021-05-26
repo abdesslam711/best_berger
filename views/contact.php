@@ -80,6 +80,7 @@
 						<li><a href="../public/index.php?route=blog">Blog</a></li>
 						<li><a href="../public/index.php?route=contact">Contact</a></li>
 						<li><a href="../public/index.php">Mentions légales</a></li>
+						<a href="../public/index.php?route=login" role="button" aria-pressed="true">Connexion</a>
 					</ul>
 				</div>
 			</div>

@@ -1,6 +1,5 @@
 <?php
 session_start();
-//require '../vendor/autoload.php';
 require '../src/controller/controller.php';
 
 try {
@@ -31,6 +30,7 @@ try {
                 break;
             case 'blog':
                 blog_file();
+               
                 break;
             case 'add_Article':
                 if (isset($_SESSION['user']) &&  $_SESSION['role_id'] == 1) {

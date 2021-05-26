@@ -28,17 +28,17 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="../public/index.php">Jean Forteroche<br><small>Auteur et écrivain</small></a>
+                <a class="navbar-brand" href="../public/index.php">BEST BURGERS<br><small>Burgers grill </small></a>
                 <div class="collapse navbar-collapse" id="navbarToggler">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                        <li class="nav-item">
+                    <li class="nav-item">
                             <a class="nav-link" href="../public/index.php">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../public/index.php?route=about">Qui suis-je ?</a>
+                            <a class="nav-link" href="../public/index.php?route=blog">Nos Burgers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../public/index.php?route=blog">Blog</a>
+                            <a class="nav-link" href="../public/index.php?route=about">Nos Boisson</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../public/index.php?route=contact">Contact</a>
@@ -62,44 +62,38 @@
     </div>
     </div>
     <div class="col-sm-12">
-        <div id="bloc_page">
-            <div class=" ">
-                <header class="breadcrumb">
-                    <h3>Affichage tous les articles</h3>
-                </header>
-                <div class=" ">
-                    <div class="section_article">
-                        <table class="table table-bordered">
-                        <?php
-                            if (isset($_SESSION['delet_article'])) {
-                                echo "<span>" . $_SESSION['delet_article'] . "</span>";
-                                unset($_SESSION['delet_article']);
-                            }
-                            ?>
-                            <tbody>
-                                <!--on recupére tous nos article-->
-                                <?php foreach ($articles as $article) { ?>
-                                    <!--Lorsqu'on click sur le titre de l'article ca nous affiche l'article complet sur une page-->
+        <div id="bloc_page">   
+            <header class="breadcrumb">
+                <h3>Affichage tous les articles</h3>
+            </header>
+            <div class="section_article">
+                <table class="table table-bordered">
+                <?php
+                    if (isset($_SESSION['delet_article'])) {
+                        echo "<span>" . $_SESSION['delet_article'] . "</span>";
+                        unset($_SESSION['delet_article']);
+                    }
+                    ?>
+                    <tbody>
+                        <!--on recupére tous nos article-->
+                        <?php foreach ($articles as $article) { ?>
+                            <!--Lorsqu'on click sur le titre de l'article ca nous affiche l'article complet sur une page-->
+                            <tr>
+                                <td>
+                                    <h4><a><?= htmlspecialchars($article['id']); ?></a></h4>
+                                </td>
+                                <td>
+                                    <h4><a href="../public/index.php?route=single&articleId=<?= htmlspecialchars($article['id']); ?>"><?= htmlspecialchars($article['title']); ?></a></h4>
+                                </td>
 
-                                    <tr>
-                                        <td>
-                                            <h4><a><?= htmlspecialchars($article['id']); ?></a></h4>
-                                        </td>
-                                        <td>
-                                            <h4><a href="../public/index.php?route=single&articleId=<?= htmlspecialchars($article['id']); ?>"><?= htmlspecialchars($article['title']); ?></a></h4>
-                                        </td>
+                                <td><a href="../public/index.php?route=edit_Article&articleId=<?= htmlspecialchars($article['id']); ?>" class="btn btn-warning btn-lg active" role="button" aria-pressed="true">Modifier l'article</a></td>
 
-                                        <td><a href="../public/index.php?route=edit_Article&articleId=<?= htmlspecialchars($article['id']); ?>" class="btn btn-warning btn-lg active" role="button" aria-pressed="true">Modifier l'article</a></td>
-
-                                        <td><a href="../public/index.php?route=deletarticle&articleId=<?= htmlspecialchars($article['id']); ?>" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Supprimer l'article</a></td>
-                                    </tr>
-
-                                <?php } ?>
-                            </tbody>
-                        </table>
-                        <br>
-                    </div>
-                </div>
+                                <td><a href="../public/index.php?route=deletarticle&articleId=<?= htmlspecialchars($article['id']); ?>" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Supprimer l'article</a></td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+                <br>
             </div>
         </div>
     </div>

@@ -19,14 +19,15 @@
 						echo "<span>".$_SESSION['add_article_erreur']."</span>";
 						unset($_SESSION['add_article_erreur']); 
 					}
+					
 				?>
 				<h1>Ajouter un article</h1>
 				<div  class = "col-sm-10">
-					<form class="" method="POST" action="">
+					<form class="" method="POST" action="" ENCTYPE="MULTIPART/FORM-DATA">
 						<label for="title">Titre</label><br>
 						<input class="form-control mx-sm-8" type="text" id="title" name="title"><br>
 						<label for="images">images</label><br>
-						<textarea id="basic-conf" class="form-control mx-sm-8" id="images" name="images"></textarea><br>
+						<input id="basic-conf" type="file" class="form-control mx-sm-8" id="images" name="images"></input><br>
 						<label for="content">content</label><br>
 						<input class="form-control mx-sm-8" type="text" id="content" name="content"><br>
 						<label for="author">Auteur</label><br>

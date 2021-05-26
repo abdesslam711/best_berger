@@ -53,6 +53,7 @@ function  displaycomment()
 	$CommentDAO->add_comment();
 	header('Location: index.php?route=single&articleId=' . $_GET['articleId']);
 }
+
 function displayarticle()
 {
 
@@ -60,6 +61,7 @@ function displayarticle()
 	$articleDAO->add_article();
 	require '../views/add_Article.php';
 }
+
 function afficher_form_modif()
 {
 
@@ -73,17 +75,11 @@ function afficher_form_modif()
 
 function modifier_article()
 {
-	if (isset($_POST["title"]) && isset($_POST["content"]) && isset($_POST["author"])) {
-		if (!empty($_POST["title"]) && !empty($_POST["content"]) && !empty($_POST["author"])) {
-			$articleDAO = new ArticleDAO();
-			$article = $articleDAO->edit_Article($_POST, $_GET['articleId']);
-			$_SESSION['modif_article_erreur'] = 'Votre article à été modifier';
-			afficher_form_modif();
-		} else {
-			$_SESSION['modif_article_erreur'] = 'tous les chemps doivent être remplies';
-			afficher_form_modif();
-		}
-	}
+	
+	$articleDAO = new ArticleDAO();
+	$article = $articleDAO->edit_Article($_POST, $_GET['articleId']);
+	afficher_form_modif();
+		
 }
 function delet_article()
 {

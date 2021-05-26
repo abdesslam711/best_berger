@@ -35,9 +35,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../public/index.php?route=contact">Contact</a>
-                        </li>	
-                        <li class="nav-item">
-                            <a href="../public/index.php?route=login" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Connexion</a>
                         </li>		
                     </ul>
                 </div>
@@ -45,8 +42,7 @@
         </div>
     </header>
     <section role="main">
-        <h1>Billet simple pour l'Alaska</h1>
-        <p><a href="../public/index.php?route=blog">Retour à la liste des billets</a></p>
+        <h1>BEST BURGERS GRILL</h1>
         <div id="publication" class="row d-flex justify-content-center mb-5">
             <!-- Récupération et Construction de l'article et ses commentaires -->
             <div class="col-md-8 mt-5 mb-5">
@@ -54,9 +50,10 @@
                     <?php foreach ($articles as $article) {   ?>
                         <!--On recupere les information de l'article-->
                         <h2><?= htmlspecialchars($article['title']); ?></h2>
+                        <a><?= $article['images']; ?></a>
                         <p><?= $article['content']; ?></p>
                         <p><?= htmlspecialchars($article['author']); ?></p>
-                        <p>Créé le : <?= htmlspecialchars($article['createdAt']); ?></p> <br>
+                        <a class="btn btn-primary btn-lg active" href="tel:06 63 40 76 94">06 63 40 76 94</a>
                     <?php } ?>
                 </article>
             </div>
@@ -107,8 +104,8 @@
             <div class="col-lg-6 d-flex justify-content-center mt-5 pt-4">
                 <ul>
                     <li><a href="../public/index.php">Accueil</a></li>
-                    <li><a href="../public/index.php?route=about">Qui suis-je ?</a></li>
-                    <li><a href="../public/index.php?route=blog">Blog</a></li>
+                    <li><a href="../public/index.php?route=about">Nos Burgers</a></li>
+                    <li><a href="../public/index.php?route=blog">Nos Boisson</a></li>
                     <li><a href="../public/index.php?route=contact">Contact</a></li>
                     <li><a href="../public/index.php">Mentions légales</a></li>
                 </ul>
