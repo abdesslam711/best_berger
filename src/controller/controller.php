@@ -76,9 +76,9 @@ function afficher_form_modif()
 function modifier_article()
 {
 	
-	$articleDAO = new ArticleDAO();
-	$article = $articleDAO->edit_Article($_POST, $_GET['articleId']);
-	afficher_form_modif();
+		$articleDAO = new ArticleDAO();
+		$article = $articleDAO->edit_Article($_POST, $_GET['articleId']);
+		afficher_form_modif();
 		
 }
 function delet_article()

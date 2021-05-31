@@ -85,7 +85,7 @@
             }else{
                 $_SESSION['modif_article_erreur'] = "<span>tous les chemps doivent étre remplies.</span>";
                 return;
-                echo $erreur = "tous les chemps doivent être completés";
+                
             }
         
         }

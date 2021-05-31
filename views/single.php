@@ -50,7 +50,7 @@
                     <?php foreach ($articles as $article) {   ?>
                         <!--On recupere les information de l'article-->
                         <h2><?= htmlspecialchars($article['title']); ?></h2>
-                        <a><?= $article['images']; ?></a>
+                        <p class="images_blog"><img src="data:image/jpg ;base64,<?= base64_encode($article['images']);?>"><p>
                         <p><?= $article['content']; ?></p>
                         <p><?= htmlspecialchars($article['author']); ?></p>
                         <a class="btn btn-primary btn-lg active" href="tel:06 63 40 76 94">06 63 40 76 94</a>
@@ -117,9 +117,9 @@
             <div class="col-lg-6 d-flex flex-column align-items-center mb-5">
                 <h3 class="pl-5 h6">Suivez moi sur:</h3>
                 <ul>
-                    <li><a href="#"><img src="../public/images/facebook-icon.png" alt="icone facebook"></a></li>
-                    <li class="pl-3"><a href="#"><img src="../public/images/instagram-icon.png" alt="icone instagram"></a></li>
-                    <li class="pl-3"><a href="#"><img src="../public/images/Twitter-icon.png" alt="icone twitter"></a></li>
+                    <li><a href="https://m.facebook.com/?locale=fr_FR"><img src="../public/images/facebook-icon.png" alt="icone facebook"></a></li>
+                    <li class="pl-3"><a href="https://www.instagram.com/accounts/emailsignup/"><img src="../public/images/instagram-icon.png" alt="icone instagram"></a></li>
+                    <li class="pl-3"><a href="https://twitter.com/?lang=fr"><img src="../public/images/Twitter-icon.png" alt="icone twitter"></a></li>
                 </ul>
             </div>
         </div>
